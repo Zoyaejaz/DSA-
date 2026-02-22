@@ -1,6 +1,6 @@
 public class Remduplicates {
     public static void main(String[] args) {
-        // this is optimal solution, T.C==O(n), S.C==O(1)
+        // this is optimal solution, T.C==O(n), S.C==O(1) , there is only one approach which is better than this and that is using hashset but that will take O(n) space
         int[] arr={1,2,2,3,3,3,4};
         int n=arr.length;
         int i=0; //pointer for next unique element
