@@ -34,7 +34,7 @@ public class Count_subarrays_withXOR_k {
         }
         System.out.println(count1);
 
-        //Optimal approach
+        //Optimal approach-Reduce the problem to find the number of subarrays with given sum
         //Time complexity: O(n), Space complexity: O(n)
         int count2=0;
         Map<Integer, Integer> map=new HashMap<>();
