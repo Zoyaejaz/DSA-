@@ -51,6 +51,8 @@ public class Queue_interface {
         //PriorityQueue is a queue interface where the elements are ordered according to their natural ordering or by a Comparator provided at queue construction time.
         Queue<Integer> pq=new PriorityQueue<>();
         //Default behaviour -> Integers -> less value has higher priority
+        //To get the maximum value as the highest priority we can use the following code
+        //Queue<Integer> pq=new PriorityQueue<>(Comparator.reverseOrder());
         pq.offer(40);
         pq.offer(30);
         pq.offer(20);

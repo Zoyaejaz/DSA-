@@ -1,6 +1,7 @@
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Set;
+import java.util.TreeMap;
 public class Map_interface {
     public static void main(String[] args){
        Map<String, String> mapping=new HashMap<>(); 
@@ -46,5 +47,16 @@ public class Map_interface {
         for(String value:mapping.values()){
             System.out.println(value);
         }
+
+
+
+        //Treemap
+        TreeMap<String,Integer> tmap=new TreeMap<String,Integer>();
+        tmap.put("A", 10);
+        tmap.put("B", 2);
+        System.out.println(tmap);
+
+
+        
     }
 }

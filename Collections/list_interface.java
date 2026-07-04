@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.LinkedList;
 import java.util.Stack;
+import java.util.Vector;
 
 public class list_interface{
     public static void main(String[] args){
@@ -148,6 +149,12 @@ public class list_interface{
 
         //empty() method is used to check if the stack is empty or not
         System.out.println(st.empty());
+
+        List<Integer> vec=new Vector<>();
+        vec.add(2);
+        vec.add(1);
+        vec.add(2);
+        System.out.println(vec);
 
 
     }

@@ -1,6 +1,7 @@
 package Binary_search;
 
 public class Upperbound {
+    //T.C=O(log n) and S.C=O(1)
     public static int find(int[] arr,int n){
         int low=0;
         int high=arr.length-1;

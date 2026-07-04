@@ -4,7 +4,7 @@ public class Search_insertposition {
     public static int find(int[] arr,int n){
         int low=0;
         int high=arr.length-1;
-        int ans=-1;
+        int ans=-arr.length;
         while(low<=high){
             int mid=low+(high-low)/2;
             if(arr[mid]>=n){
