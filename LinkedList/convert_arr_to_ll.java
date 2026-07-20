@@ -23,7 +23,7 @@ public class convert_arr_to_ll {
             mover.next=temp;
             mover=temp;
         }
-        return head;
+        return head; //question
     }
     public static void main(String[] args) {
         int[] arr={2,3,4,5};
