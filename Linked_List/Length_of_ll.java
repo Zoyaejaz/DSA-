@@ -1,4 +1,4 @@
-package Deletion;
+package Linked_List;
 class Node{
     int data;
     Node next;
@@ -11,7 +11,7 @@ class Node{
         this.next=null;
     }
 }
-public class Tail {
+public class Length_of_ll {
     private static Node convert_arr_Node(int[] arr){
         Node head=new Node(arr[0]);
         Node mover=head;
@@ -22,28 +22,18 @@ public class Tail {
         }
         return head;
     }
-    private static void print(Node head){
-        while(head!=null){
-            System.out.print(head.data+" ");
-            head=head.next;
-        }
-        System.out.println();
-    }
-    private static Node remove(Node head){
-        if(head==null || head.next==null){
-            return null;
-        }
+    private static int lengthofll(Node head){
+        int count=0;
         Node temp=head;
-        while(temp.next.next!=null){
+        while(temp!=null){
             temp=temp.next;
+            count++;
         }
-        temp.next=null;
-        return head;
+        return count;
     }
     public static void main(String[] args) {
-        int[] arr={1,3,5,6,2,7};
+        int[] arr={2,5,3,7,8};
         Node head=convert_arr_Node(arr);
-        remove(head);
-        print(head);
+        System.out.println(lengthofll(head));
     }
 }

@@ -1,4 +1,4 @@
-package Insertion;
+package Linked_List.Insertion;
 class Node{
     int data;
     Node next;
@@ -11,7 +11,7 @@ class Node{
         this.next=null;
     }
 }
-public class kth_el {
+public class tail {
     private static Node convert_arr_Node(int[] arr){
         Node head=new Node(arr[0]);
         Node mover=head;
@@ -29,35 +29,22 @@ public class kth_el {
         }
         System.out.println();
     }
-    private static Node insertNode(Node head,int el,int k){
+    private static Node add(Node head,int val){
         if(head==null){
-            if(k==1){
-                return new Node(el);
-            }
-            else{
-                return head;
-            }
+            return new Node(val);
         }
-        if(k==1){
-            return new Node(el,head);
-        }
-        int cnt=0;
         Node temp=head;
-        while(temp!=null){
-            cnt++;
-            if(cnt==(k-1)){
-                Node x=new Node(el,temp.next);
-                temp.next=x;
-                break;
-            }
+        while(temp.next!=null){
             temp=temp.next;
         }
+        Node newNode=new Node(val);
+        temp.next=newNode;
         return head;
-    }
+    } 
     public static void main(String[] args) {
-        int[] arr={2,4,1,5,6};
+        int[] arr={1,3,5,2,6};
         Node head=convert_arr_Node(arr);
-        head=insertNode(head, 100, 2);
+        head=add(head,4);
         print(head);
     }
 }

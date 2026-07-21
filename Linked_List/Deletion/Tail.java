@@ -1,4 +1,4 @@
-package Insertion;
+package Linked_List.Deletion;
 class Node{
     int data;
     Node next;
@@ -11,7 +11,7 @@ class Node{
         this.next=null;
     }
 }
-public class tail {
+public class Tail {
     private static Node convert_arr_Node(int[] arr){
         Node head=new Node(arr[0]);
         Node mover=head;
@@ -29,22 +29,21 @@ public class tail {
         }
         System.out.println();
     }
-    private static Node add(Node head,int val){
-        if(head==null){
-            return new Node(val);
+    private static Node remove(Node head){
+        if(head==null || head.next==null){
+            return null;
         }
         Node temp=head;
-        while(temp.next!=null){
+        while(temp.next.next!=null){
             temp=temp.next;
         }
-        Node newNode=new Node(val);
-        temp.next=newNode;
+        temp.next=null;
         return head;
-    } 
+    }
     public static void main(String[] args) {
-        int[] arr={1,3,5,2,6};
+        int[] arr={1,3,5,6,2,7};
         Node head=convert_arr_Node(arr);
-        head=add(head,4);
+        remove(head);
         print(head);
     }
 }

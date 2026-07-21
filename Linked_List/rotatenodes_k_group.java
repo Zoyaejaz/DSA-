@@ -1,4 +1,4 @@
-package LinkedList;
+package Linked_List;
 public class rotatenodes_k_group {
     static class ListNode {
     int val;

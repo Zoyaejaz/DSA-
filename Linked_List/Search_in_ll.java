@@ -1,3 +1,4 @@
+package Linked_List;
 class Node{
     int data;
     Node next;
@@ -10,8 +11,8 @@ class Node{
         this.next=null;
     }
 }
-public class Length_of_ll {
-    private static Node convert_arr_Node(int[] arr){
+    public class Search_in_ll {
+    private static Node convert(int[] arr){
         Node head=new Node(arr[0]);
         Node mover=head;
         for(int i=1;i<arr.length;i++){
@@ -21,18 +22,17 @@ public class Length_of_ll {
         }
         return head;
     }
-    private static int lengthofll(Node head){
-        int count=0;
+    private static int search(Node head,int val){
         Node temp=head;
         while(temp!=null){
+            if(temp.data==val) return 1;
             temp=temp.next;
-            count++;
         }
-        return count;
+        return 0;
     }
     public static void main(String[] args) {
-        int[] arr={2,5,3,7,8};
-        Node head=convert_arr_Node(arr);
-        System.out.println(lengthofll(head));
+        int[] arr={2,4,6,3,7};
+        Node head=convert(arr);
+        System.out.println(search(head, 5));
     }
 }
